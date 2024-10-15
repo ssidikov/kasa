@@ -1,0 +1,32 @@
+@import './_variables.sass'
+@import './_mixins.sass'
+
+.header
+  @include flex-container
+  justify-content: space-between
+
+  &-logo
+    &__img
+      height: 70px
+    // justify-content: flex-start
+
+  &-nav
+    ul
+      @include flex-container
+      flex-direction: row
+      justify-content: flex-end
+      list-style: none
+      padding: 0
+      margin: 0
+
+    a
+      text-decoration: none
+      color: $text-color
+      padding: 10px
+      margin: 0 5px
+      font-size: 1.2rem
+      font-weight: 600
+      transition: color 0.3s
+
+      &:hover
+        color: $primary-color
