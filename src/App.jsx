@@ -12,14 +12,16 @@ import './styles/styles.sass'
 function App() {
   return (
     <div>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        {/* <Route path='/about' element={<About />} />
-        <Route path='/property/:id' element={<Property />} />
-         */}
-        <Route path='*' element={<Error />} />
-      </Routes>
+      <div className='content-wrapper'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          {/* <Route path='/about' element={<About />} />
+          <Route path='/property/:id' element={<Property />} />
+           */}
+          <Route path='*' element={<Error />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )

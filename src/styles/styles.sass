@@ -4,7 +4,7 @@
 @import 'Header.sass'
 @import 'Home.sass'
 @import 'Footer.sass'
-@import 'Error.sass'
+@import 'ErrorPage.sass'
 
 *
   box-sizing: border-box
@@ -12,18 +12,23 @@
   padding: 0
 body
   font-family: $font-family
-  margin-right: 100px
-  margin-left: 100px
   color: $text-color
+  .content-wrapper
+    padding-left: 100px
+    padding-right: 100px
   h1, h2, h3, h4, h5, h6
     font-family: $font-family
     font-weight: 700
     color: $text-color
   img
     object-fit: cover
-  header, main, footer
+  header, main,.content-wrapper
     margin: 0 auto
     max-width: 1440px
     min-height: 0
     min-height: auto
+    width: 100%
     width: -webkit-fill-available
+  footer
+    padding-left: 0
+    padding-right: 0
