@@ -22,12 +22,15 @@
 
     a
       text-decoration: none
-      color: $text-color
       padding: 10px
       margin: 0 5px
       font-size: 1.2rem
-      font-weight: 600
+      font-weight: 500
       transition: color 0.3s
 
       &:hover
         color: $primary-color
+
+      &.active
+        font-weight: 700
+        border-bottom: 2px solid $text-color

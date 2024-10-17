@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 function Card({ cover, title, id }) {
   return (
     <Link to={`/property/${id}`} className='card'>
-      <img src={cover} alt={title} className='card-img' />
-      <h2 className='card-title'>{title}</h2>
+      <div className='card-img__container'>
+        <img src={cover} alt={title} className='card-img' />
+        <h2 className='card-title'>{title}</h2>
+      </div>
     </Link>
   )
 }

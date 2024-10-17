@@ -12,10 +12,14 @@ function Header() {
       <nav className='header-nav'>
         <ul>
           <li>
-            <NavLink to='/'>Accueil</NavLink>
+            <NavLink exact to='/' activeClassName='active-link'>
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/About'>À propos</NavLink>
+            <NavLink to='/About' activeClassName='active-link'>
+              À propos
+            </NavLink>
           </li>
         </ul>
       </nav>

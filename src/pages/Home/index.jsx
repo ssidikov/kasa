@@ -5,14 +5,14 @@ import data from '../../data/data.json'
 
 function Home() {
   return (
-    <div>
+    <main>
       <Banner />
       <section className='cards'>
         {data.map((item) => (
           <Card key={item.id} id={item.id} cover={item.cover} title={item.title} />
         ))}
       </section>
-    </div>
+    </main>
   )
 }
 

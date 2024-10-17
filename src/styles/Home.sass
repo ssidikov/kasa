@@ -1,3 +1,68 @@
+// .banner
+//   background-image: url('../assets/Banner/Banner.jpg')
+//   background-size: cover
+//   background-position: center
+//   height: 223px
+//   width: 100%
+//   margin-top: 50px
+//   border-radius: 25px
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+//   // opacity: 0.6
+//   // background-color: darken($background-color, 60%)
+//   // background: #000
+//   // mix-blend-mode: darken
+//   h1
+//     text-align: center
+//     font-size: 48px
+//     font-weight: 700
+//     color: $white
+//     margin-top: 0
+//     padding-top: 80px
+//     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+//     -webkit-text-stroke-width: 1
+//     -webkit-text-stroke-color: #000
+//     line-height: 1.4
+
+// .cards
+//   display: flex
+//   // flex-wrap: wrap
+//   flex-flow: row wrap
+//   justify-content: flex-start
+//   padding: 56px 50px 43px
+//   // justify-content: space-between
+//   // gap: 50px
+//   margin-top: 50px
+//   margin-bottom: 50px
+//   background-color: $background-color
+//   // width: 100%
+//   // max-width: 1200px
+//   .card
+//     // flex: 0 0 32%
+//     // align-self: flex-start
+//     margin-right: 60px
+//     margin-bottom: 50px
+//     border-radius: 10px
+//     padding: 0
+//     width: 100%
+//     max-width: 340px
+//     height: 340px
+//     // overflow: hidden
+//     // max-width: 340px
+//     // max-height: 340px
+//     position: absolute
+//     &:last-child
+//       margin-right: 0
+//     &:hover
+//       transform: scale(1.0001)
+//       transition: transform 0.2s
+//       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+//     &-img
+//       border-radius: 25px
+//       height: 200px
+//       width: 100%
+//       object-fit: cover
+//     &-title
+//       position: relative
 .banner
   background-image: url('../assets/Banner/Banner.jpg')
   background-size: cover
@@ -7,10 +72,7 @@
   margin-top: 50px
   border-radius: 25px
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
-  // opacity: 0.6
-  // background-color: darken($background-color, 60%)
-  // background: #000
-  // mix-blend-mode: darken
+
   h1
     text-align: center
     font-size: 48px
@@ -25,25 +87,74 @@
 
 .cards
   display: flex
-  // flex-wrap: wrap
-  flex-flow: row wrap
-  justify-content: space-evenly
-  // gap: 50px
+  flex-wrap: wrap
+  justify-content: flex-start
+  padding: 56px 50px 43px
   margin-top: 50px
-  // justify-content: space-between
-  // width: 100%
-  // max-width: 1200px
+  margin-bottom: 50px
+  background-color: $background-color
+  border-radius: 25px
+
   .card
+    flex: 0 0 calc(33.33% - 50px)
+    margin: 30px 25px
     border-radius: 10px
     padding: 0
-    width: 100%
-    max-width: 340px
-    height: 340px
-    // overflow: hidden
-    // max-width: 340px
-    // max-height: 340px
-    // position: relative
-    &:hover
-      transform: scale(1.01)
-      transition: transform 0.2s
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    position: relative
+    // height: auto
+    // width: auto
+    @media (min-width: 1440px)
+      height: 340px
+      width: 340px
+    @media (max-width: 1200px)
+      flex: 0 0 calc(50% - 50px) // 2 карточки в ряд для экранов до 1200px
+
+    @media (max-width: 768px)
+      flex: 0 0 calc(100% - 50px) // 1 карточка в ряд для экранов до 768px
+    &-img__container
+      position: relative // Позволяет заголовку позиционироваться внутри
+      overflow: hidden
+      height: 100%
+      border-radius: 10px
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgb(73,73,73)
+        background: linear-gradient(0deg, rgba(73,73,73,1) 0%, rgba(205,205,205,0) 40%, rgba(167,167,167,0) 100%)
+        z-index: 1
+        // opacity: 0 // Изначально невидимо
+        overflow: hidden
+      &:hover
+        &::after
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%)
+          transition: opacity 0.3s ease-in-out
+
+    &-img
+      border-radius: 10px
+      height: 100%
+      width: 100%
+      object-fit: cover
+      z-index: 0 // Устанавливаем z-index, чтобы изображение было под затемнением
+
+    &-title
+      position: absolute // Позволяет заголовку быть над изображением
+      bottom: 0 // Прикрепляет заголовок к нижней части изображения
+      left: 0
+      right: 0
+      // background-color: rgba(0, 0, 0, 0.6) // Полупрозрачный фон для читаемости
+      color: $white
+      padding: 20px // Отступы вокруг текста
+      text-align: start // Центрирует текст
+      margin: 0 // Убирает отступы
+      z-index: 2 // Устанавливаем z-index, чтобы текст был над затемнением
+      font-size: 18px
+      font-weight: 700
+      line-height: 1.4
+    // &:hover
+    // &-img-container::after
+    //   opacity: 1 // Показать затемнение при наведении
+    //   transition: opacity 0.3s ease-in-out
