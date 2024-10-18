@@ -2,15 +2,27 @@
 @import 'variables.sass'
 @import 'mixins.sass'
 @import 'Header.sass'
+@import 'Banner.sass'
 @import 'Home.sass'
 @import 'Footer.sass'
 @import 'ErrorPage.sass'
+@import 'About.sass'
 
 *
   box-sizing: border-box
   margin: 0
   padding: 0
+
+#root
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+main
+  flex: 1
+
 body
+  line-height: 1.4
   font-family: $font-family
   color: $text-color
   .content-wrapper

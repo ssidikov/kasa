@@ -1,12 +1,24 @@
-// import BannerImg from '../../assets/Banner/Banner.jpg'
+import PropTypes from 'prop-types'
 
-function Banner() {
+function Banner({ image, title, altText, lighter = false }) {
+  const bannerOverlay = lighter ? 'banner-overlay lighter' : 'banner-overlay'
   return (
     <div className='banner'>
-      {/* <img src={BannerImg} alt='Chez vous, partout et ailleurs' className='banner-img' /> */}
-      <h1>Chez vous, partout et ailleurs</h1>
+      <img src={image} alt={altText} className='banner-img' />
+      <div className={bannerOverlay}></div>
+      {title && <h1 className='banner__title'>{title}</h1>}
     </div>
   )
+}
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  altText: PropTypes.string.isRequired,
+}
+
+Banner.defaultProps = {
+  title: null,
 }
 
 export default Banner

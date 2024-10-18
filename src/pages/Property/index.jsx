@@ -13,6 +13,11 @@ function Property() {
     }
   }, [property, navigate])
 
+  if (!property) {
+    // Return NULL, since the redirect is already executed
+    return null
+  }
+
   return (
     <div className='property'>
       <img src={property.cover} alt={property.title} className='property__image' />
@@ -37,6 +42,7 @@ function Property() {
           </span>
         ))}
       </div>
+
       <p>{property.description}</p>
       <h2>Equipments</h2>
       <ul>
