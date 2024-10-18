@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Routes, Route } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -11,16 +10,16 @@ import './styles/styles.sass'
 
 function App() {
   return (
-    <div>
-      <div className='content-wrapper'>
-        <Header />
+    <div className='app-container'>
+      <Header />
+      <main className='content-wrapper'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/property/:id' element={<Property />} />
           <Route path='*' element={<Error />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </div>
   )

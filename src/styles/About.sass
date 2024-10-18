@@ -4,9 +4,9 @@
   margin-bottom: 38px
 
 .dropdown
+  align-items: center
   margin: 38px 108px
-  padding: 30px
-  border: 1px solid #000
+  padding: 10px 20px 10px 15px
   border-radius: 5px
   background-color: $primary-color
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
@@ -21,10 +21,23 @@
   &:hover
     background-color: #ff6060c7
 
+  &-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
   &-title
-    margin: 10px 15px
     color: $white
     font-size: 24px
     font-weight: 700
   &-arrow
     font-size: 24px
+    width: 32px
+    height: 32px
+    transition: transform 0.3s
+
+  &-content
+    margin-top: 10px
+    font-size: 16px
+    font-weight: 400
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out
