@@ -81,83 +81,41 @@
 
   &__details
     margin-top: 20px
-
-    .dropdown-header
-      display: flex
-      justify-content: space-between
-      align-items: center
-      padding: 10px 15px
-      cursor: pointer
-      background: $primary-color
-      border-radius: 8px
-      color: $white
-      transition: background 0.3s ease
-
-      &:hover
-        background: lighten($primary-color, 5%)
-
-    &__title
-      font-size: 18px
-      font-weight: 600
-
-    &__text
-      margin: 0
-      padding: 15px
-      background: #f9f9f9
-      border-radius: 8px
-
-    &-equipments-list
-      list-style: none
-      padding: 0
-      margin: 0
-
-    &-equipments-list-item
-      font-size: 16px
-      margin-bottom: 8px
-
-  &__details
     display: flex
     align-items: flex-start
     justify-content: space-between
     gap: 76px
 
-    &__description,
-    &__equipments
-      display: flex
-      border-radius: 10px
-      padding: 10px 20px 10px
-      background-color: #fff
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-      width: 50%
+  &-description,
+  &-equipments
+    border-radius: 10px
+    background-color: $background-color
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    width: 50%
 
     .dropdown-header
-      display: flex
-      justify-content: space-between
-      align-items: center
-      align-self: stretch
+      padding: 10px 20px 10px
       cursor: pointer
       background: $primary-color
+      border-radius: 8px
       color: $white
       transition: background 0.3s ease
 
-      &:hover
-        background: lighten($primary-color, 5%)
-
     &__title
+      color: $white
       font-size: 18px
       font-weight: 600
 
     &__text
       margin: 0
       padding: 15px
-      background: #f9f9f9
+      background: $background-color
       border-radius: 8px
 
-    &-equipments-list
-      list-style: none
-      padding: 0
-      margin: 0
-
-    &-equipments-list-item
-      font-size: 16px
-      margin-bottom: 8px
+      &-list
+        list-style: none
+        padding: 0
+        margin: 0
+        font-size: 18px
+        margin-bottom: 8px
+        font-weight: 400

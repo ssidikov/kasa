@@ -81,9 +81,9 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
             />
           </div>
           {isEquipmentsOpen && (
-            <ul className='property-equipments-list'>
+            <ul className='property-equipments__text'>
               {equipments.map((equipment, index) => (
-                <li key={index} className='property-equipments-list-item'>
+                <li key={index} className='property-equipments__text-list'>
                   {equipment}
                 </li>
               ))}
