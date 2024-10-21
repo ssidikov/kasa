@@ -39,7 +39,6 @@
       background: $primary-color
       border-radius: 10px
       padding: 5px 10px
-      cursor: pointer
 
   &__host
     display: flex
@@ -72,27 +71,93 @@
     &-star
       margin-left: 5px
       cursor: pointer
-
-      // Когда звезда заполнена
       &.filled
-        .star-ico
-          color: $primary-color
+        color: $primary-color
 
-      .star-ico
-        color: #e3e3e3
+      &.star-ico
+        width: 24px
+        height: 24px
+        fill: #e3e3e3
 
   &__details
-    &-description
-      margin-bottom: 16px
+    margin-top: 20px
 
-    &-equipments
+    .dropdown-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px 15px
+      cursor: pointer
+      background: $primary-color
+      border-radius: 8px
+      color: $white
+      transition: background 0.3s ease
+
+      &:hover
+        background: lighten($primary-color, 5%)
+
+    &__title
+      font-size: 18px
+      font-weight: 600
+
+    &__text
+      margin: 0
+      padding: 15px
+      background: #f9f9f9
+      border-radius: 8px
+
+    &-equipments-list
       list-style: none
       padding: 0
+      margin: 0
 
-    &-equipment
+    &-equipments-list-item
       font-size: 16px
       margin-bottom: 8px
 
   &__details
     display: flex
+    align-items: flex-start
     justify-content: space-between
+    gap: 76px
+
+    &__description,
+    &__equipments
+      display: flex
+      border-radius: 10px
+      padding: 10px 20px 10px
+      background-color: #fff
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      width: 50%
+
+    .dropdown-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      align-self: stretch
+      cursor: pointer
+      background: $primary-color
+      color: $white
+      transition: background 0.3s ease
+
+      &:hover
+        background: lighten($primary-color, 5%)
+
+    &__title
+      font-size: 18px
+      font-weight: 600
+
+    &__text
+      margin: 0
+      padding: 15px
+      background: #f9f9f9
+      border-radius: 8px
+
+    &-equipments-list
+      list-style: none
+      padding: 0
+      margin: 0
+
+    &-equipments-list-item
+      font-size: 16px
+      margin-bottom: 8px
