@@ -1,0 +1,51 @@
+@import _variables
+
+.slider
+  position: relative
+  width: 100%
+  height: 415px
+  overflow: hidden
+  border-radius: 25px
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__button
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background: none
+    color: $white
+    border: none
+    width: 47px
+    height: 79px
+    cursor: pointer
+    font-size: 72px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__button--prev
+    left: 24px
+
+  &__button--next
+    right: 24px
+
+  &__counter
+    position: absolute
+    bottom: 25px
+    left: 50%
+    transform: translateX(-50%)
+    color: $white
+    padding: 8px 16px
+    border-radius: 5px
+    font-size: 14px
+    text-align: center
+    font-size: 18px
+    font-weight: 500
+  &__error
+    text-align: center
+    font-size: 18px
+    color: $primary-color
