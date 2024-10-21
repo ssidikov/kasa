@@ -1,0 +1,98 @@
+@import _variables
+
+.property
+  margin-top: 50px
+  margin-bottom: 50px
+
+  &__gallery
+    margin-bottom: 30px
+
+  &__info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 24px
+
+    &-main
+      flex: 1
+      margin-right: 20px
+
+    &-title
+      font-size: 36px
+      font-weight: 500
+      color: $primary-color
+
+    &-location
+      font-size: 18px
+      font-weight: 500
+
+    &-tags
+      display: flex
+      align-items: center
+      margin-top: 20px
+      margin-bottom: 24px
+
+    &-tag
+      font-size: 14px
+      font-weight: 700
+      color: $white
+      margin-right: 10px
+      background: $primary-color
+      border-radius: 10px
+      padding: 5px 10px
+      cursor: pointer
+
+  &__host
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &-info
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin-bottom: 21px
+      gap: 10px
+
+    &-name
+      font-size: 18px
+      font-weight: 500
+      color: $primary-color
+
+    &-picture
+      width: 64px
+      height: 64px
+      border-radius: 50%
+
+    &-rating
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 5px
+
+    &-star
+      margin-left: 5px
+      cursor: pointer
+
+      // Когда звезда заполнена
+      &.filled
+        .star-ico
+          color: $primary-color
+
+      .star-ico
+        color: #e3e3e3
+
+  &__details
+    &-description
+      margin-bottom: 16px
+
+    &-equipments
+      list-style: none
+      padding: 0
+
+    &-equipment
+      font-size: 16px
+      margin-bottom: 8px
+
+  &__details
+    display: flex
+    justify-content: space-between

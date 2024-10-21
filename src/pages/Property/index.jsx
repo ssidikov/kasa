@@ -21,7 +21,7 @@ function Property() {
   }
 
   return (
-    <div className='property'>
+    <React.Fragment>
       <PropertyCard
         pictures={property.pictures}
         title={property.title}
@@ -32,7 +32,7 @@ function Property() {
         description={property.description}
         equipments={property.equipments}
       />
-    </div>
+    </React.Fragment>
   )
 }
 
