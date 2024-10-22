@@ -27,7 +27,7 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
       <div className='property__info'>
         <div className='property__info-main'>
           <h1 className='property__info-title'>{title}</h1>
-          <p className='property__info-location'>Location: {location}</p>
+          <p className='property__info-location'>{location}</p>
           {/* Tags */}
           <div className='property__info-tags'>
             {tags.map((tag, index) => (
