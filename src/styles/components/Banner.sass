@@ -8,10 +8,14 @@
   margin-top: 50px
   border-radius: $border-radius-large
   overflow: hidden
-  filter: $banner-shadow // можешь добавить переменную для тени
+  filter: $banner-shadow
+  @include tablet-version
+    margin-top: 20px
+    height: 111px
+    border-radius: $border-radius-m
 
   &-img
-    @include cover-img // если часто используешь, лучше сделать миксин
+    @include cover-img
 
   &-overlay
     @include absolute-cover
@@ -33,3 +37,9 @@
     text-shadow: $text-shadow
     text-align: center
     white-space: nowrap
+    width: 90%
+    @include tablet-version
+      padding-right: 96px
+      text-align: left
+      font-size: $font-size-lg
+      white-space: normal

@@ -5,10 +5,15 @@
   @include flex-container
   justify-content: space-between
   margin-top: 45px
+  @include tablet-version
+    margin-top: 20px
 
   &-logo
     &__img
       height: 70px
+      @include tablet-version
+        height: 47px
+        width: 145px
 
   &-nav
     ul
@@ -27,6 +32,8 @@
       font-size: $font-size-md
       font-weight: 500
       transition: color $transition-duration
+      @include mobile-version
+        font-size: $font-size-sm
 
       &:hover
         color: $primary-color

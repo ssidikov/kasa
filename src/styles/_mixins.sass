@@ -1,3 +1,5 @@
+@import '_variables.sass'
+
 @mixin flex-container
   display: flex
   justify-content: center
@@ -25,3 +27,13 @@
   position: absolute
   left: 50%
   transform: translateX(-50%)
+
+//Media Queries
+
+@mixin tablet-version
+  @media screen and (max-width: #{$breakpoint-m})
+    @content
+
+@mixin mobile-version
+  @media screen and (max-width: #{$breakpoint-s})
+    @content

@@ -34,7 +34,9 @@ body
   header, .content-wrapper
     padding-left: 100px
     padding-right: 100px
-    // flex-grow: 1
+    @include tablet-version
+      padding-left: 20px
+      padding-right: 20px
 
   h1, h2, h3, h4, h5, h6
     font-family: $font-family
