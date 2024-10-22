@@ -17,13 +17,20 @@ function Slider({ pictures, title }) {
 
   return (
     <div className='slider'>
-      <img
-        src={pictures[currentIndex]}
-        alt={`${title} - ${currentIndex + 1}`}
-        className='slider__image'
-      />
+      <div
+        className='slider__image-wrapper'
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {pictures.map((picture, index) => (
+          <img
+            key={index}
+            src={picture}
+            alt={`${title} - ${index + 1}`}
+            className='slider__image'
+          />
+        ))}
+      </div>
       {pictures.length > 1 && (
-        <>
+        <React.Fragment>
           <button className='slider__button slider__button--prev' onClick={prevSlide}>
             ❮
           </button>
@@ -33,7 +40,7 @@ function Slider({ pictures, title }) {
           <div className='slider__counter'>
             {currentIndex + 1} / {pictures.length}
           </div>
-        </>
+        </React.Fragment>
       )}
     </div>
   )

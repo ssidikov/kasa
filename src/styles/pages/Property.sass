@@ -87,45 +87,29 @@
     justify-content: space-between
     gap: 76px
 
-  &-description,
-  &-equipments
-    border-radius: $border-radius-m
-    background-color: $background-color
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-    width: 50%
+    .dropdown
+      margin: 0
+      width: 50%
+      border-radius: $border-radius-m
+      background-color: $background-color
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
 
-    .dropdown-header
-      padding: 10px 20px 10px
-      cursor: pointer
-      background: $primary-color
-      border-radius: 8px
-      color: $white
-      transition: background 0.3s ease
+    &-content
+      padding: 0 0 20px 0 // Убираем боковые отступы и добавляем нижний отступ
+      margin: 0
+      &.expanded
+        margin: 0
+        padding: 20px
 
-    &__title
+    .dropdown-title
       color: $white
       font-size: 18px
       font-weight: 600
 
-    &__text
-      font-size: $font-size-md
+    .equipment-list
+      list-style: none
+      padding: 0
+      margin: 0
+      font-size: 18px
+      margin-bottom: 8px
       font-weight: 400
-      transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease, padding 0.5s ease
-      max-height: 0
-      opacity: 0
-      overflow: hidden
-      margin-top: 0
-      padding: 0 20px
-      &.expanded
-        max-height: 500px
-        opacity: 1
-        margin-top: 10px
-        padding: 20px
-
-      &-list
-        list-style: none
-        padding: 0
-        margin: 0
-        font-size: 18px
-        margin-bottom: 8px
-        font-weight: 400

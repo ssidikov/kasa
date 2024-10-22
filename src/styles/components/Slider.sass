@@ -8,8 +8,15 @@
   overflow: hidden
   border-radius: $border-radius-large
 
+  &__image-wrapper
+    display: flex
+    transition: transform 0.5s ease-in-out
+    width: 100%
+
   &__image
-    @include cover-img
+    height: 29vh
+    width: 100%
+    flex-shrink: 0
 
   &__button
     @include center-element-y

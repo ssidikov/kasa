@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import Slider from '../Slider'
 import Star from '../../assets/Icons/star.svg'
 import RedStar from '../../assets/Icons/red-star.svg'
-import ArrowIcon from '../../assets/Icons/arrow-down.svg'
+// import ArrowIcon from '../../assets/Icons/arrow-down.svg'
+import Dropdown from '../Dropdown'
 
 function PropertyCard({ title, description, pictures, host, rating, location, equipments, tags }) {
-  const [isDetailsOpen, setDetailsOpen] = useState(false) // condition for Details
-  const [isEquipmentsOpen, setEquipmentsOpen] = useState(false) // condition for equipments
+  // const [isDetailsOpen, setDetailsOpen] = useState(false) // condition for Details
+  // const [isEquipmentsOpen, setEquipmentsOpen] = useState(false) // condition for equipments
 
-  const toggleDetails = () => {
-    setDetailsOpen(!isDetailsOpen)
-  }
+  // const toggleDetails = () => {
+  //   setDetailsOpen(!isDetailsOpen)
+  // }
 
-  const toggleEquipments = () => {
-    setEquipmentsOpen(!isEquipmentsOpen)
-  }
+  // const toggleEquipments = () => {
+  //   setEquipmentsOpen(!isEquipmentsOpen)
+  // }
 
   return (
     <div className='property'>
@@ -58,40 +59,18 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
       {/* Description and list of equipment */}
       <div className='property__details'>
         {/* Dropdown for Details */}
-        <div className='property-description'>
-          <div className='dropdown-header' onClick={toggleDetails}>
-            <h3 className='property-description__title'>Details</h3>
-            <img
-              src={ArrowIcon}
-              alt='Dropdown Arrow'
-              className='dropdown-arrow'
-              style={{ transform: isDetailsOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}
-            />
-          </div>
-          <div className={`property-description__text ${isDetailsOpen ? 'expanded' : ''}`}>
-            {description}
-          </div>
-        </div>
+        <Dropdown title='Details'>{description}</Dropdown>
 
         {/* Dropdown for Équipements */}
-        <div className='property-equipments'>
-          <div className='dropdown-header' onClick={toggleEquipments}>
-            <h3 className='property-equipments__title'>Équipements</h3>
-            <img
-              src={ArrowIcon}
-              alt='Dropdown Arrow'
-              className='dropdown-arrow'
-              style={{ transform: isEquipmentsOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}
-            />
-          </div>
-          <ul className={`property-equipments__text ${isEquipmentsOpen ? 'expanded' : ''}`}>
+        <Dropdown title='Équipements'>
+          <ul>
             {equipments.map((equipment, index) => (
-              <li key={index} className='property-equipments__text-list'>
+              <li key={index} className='equipment-list'>
                 {equipment}
               </li>
             ))}
           </ul>
-        </div>
+        </Dropdown>
       </div>
     </div>
   )
