@@ -89,7 +89,7 @@
 
   &-description,
   &-equipments
-    border-radius: 10px
+    border-radius: $border-radius-m
     background-color: $background-color
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
     width: 50%
@@ -108,10 +108,19 @@
       font-weight: 600
 
     &__text
-      margin: 0
-      padding: 15px
-      background: $background-color
-      border-radius: 8px
+      font-size: $font-size-md
+      font-weight: 400
+      transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease, padding 0.5s ease
+      max-height: 0
+      opacity: 0
+      overflow: hidden
+      margin-top: 0
+      padding: 0 20px
+      &.expanded
+        max-height: 500px
+        opacity: 1
+        margin-top: 10px
+        padding: 20px
 
       &-list
         list-style: none

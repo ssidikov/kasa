@@ -14,11 +14,11 @@ const Dropdown = ({ title, children }) => {
         <h3 className='dropdown-title'>{title}</h3>
         <div
           className='dropdown-arrow'
-          style={{ transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)' }}>
+          style={{ transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}>
           <img src={ArrowIcon} alt='Dropdown Arrow' />
         </div>
       </div>
-      {isOpen && <div className='dropdown-content'>{children}</div>}
+      <div className={`dropdown-content ${isOpen ? 'expanded' : ''}`}>{children}</div>
     </div>
   )
 }

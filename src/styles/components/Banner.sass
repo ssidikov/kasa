@@ -1,26 +1,20 @@
 @import '../_variables.sass'
+@import '../_mixins.sass'
 
 .banner
   position: relative
   width: 100%
   height: 223px
   margin-top: 50px
-  border-radius: 25px
+  border-radius: $border-radius-large
   overflow: hidden
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+  filter: $banner-shadow // можешь добавить переменную для тени
 
   &-img
-    width: 100%
-    height: 100%
-    object-fit: cover
-    border-radius: 25px
+    @include cover-img // если часто используешь, лучше сделать миксин
 
   &-overlay
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+    @include absolute-cover
     z-index: 1
     opacity: 0.6
     background: $text-color
@@ -33,9 +27,9 @@
     left: 50%
     transform: translate(-50%, -50%)
     z-index: 2
-    color: white
-    font-size: 48px
+    color: $white
+    font-size: $font-size-xxl
     font-weight: 700
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    text-shadow: $text-shadow
     text-align: center
-    text-wrap: nowrap
+    white-space: nowrap

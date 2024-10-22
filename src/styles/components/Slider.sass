@@ -1,21 +1,18 @@
 @import '../_variables.sass'
+@import '../_mixins.sass'
 
 .slider
   position: relative
   width: 100%
   height: 415px
   overflow: hidden
-  border-radius: 25px
+  border-radius: $border-radius-large
 
   &__image
-    width: 100%
-    height: 100%
-    object-fit: cover
+    @include cover-img
 
   &__button
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
+    @include center-element-y
     background: none
     color: $white
     border: none
@@ -23,9 +20,6 @@
     height: 79px
     cursor: pointer
     font-size: 72px
-    display: flex
-    align-items: center
-    justify-content: center
 
   &__button--prev
     left: 24px
@@ -34,18 +28,10 @@
     right: 24px
 
   &__counter
-    position: absolute
+    @include center-element-x
     bottom: 25px
-    left: 50%
-    transform: translateX(-50%)
     color: $white
-    padding: 8px 16px
-    border-radius: 5px
-    font-size: 14px
-    text-align: center
-    font-size: 18px
+    padding: $padding-sm
+    border-radius: $border-radius-small
+    font-size: $font-size-md
     font-weight: 500
-  &__error
-    text-align: center
-    font-size: 18px
-    color: $primary-color
