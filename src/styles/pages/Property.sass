@@ -126,18 +126,26 @@
       border-radius: $border-radius-m
       background-color: $background-color
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      @include tablet-version
+        width: 100%
 
     &-content
       padding: 0 0 20px 0
       margin: 0
+      @include tablet-version
+        padding: 13px 20px
       &.expanded
         margin: 0
         padding: 20px
+        @include tablet-version
+        padding: 13px 20px
 
     .dropdown-title
       color: $white
       font-size: 18px
       font-weight: 600
+      @include tablet-version
+        font-size: 13px
 
     .equipment-list
       list-style: none
@@ -146,3 +154,6 @@
       font-size: 18px
       margin-bottom: 8px
       font-weight: 400
+      @include tablet-version
+        font-size: 12px
+        margin-bottom: 5px
