@@ -21,16 +21,30 @@
     justify-content: space-between
     align-items: center
     background-color: $primary-color
+    @include tablet-version
+      padding: 10px
 
   &-title
     color: $white
     font-size: $font-size-x
+    @include tablet-version
+      font-size: 13px
 
   &-arrow
-    font-size: 32px
+    display: flex
+    justify-content: center
+    align-items: center
     width: 32px
     height: 32px
     transition: transform 0.3s ease
+    @include tablet-version
+      width: 16px
+      height: 16px
+
+    .arrow-icon
+      @include tablet-version
+        width: 16px
+        height: 16px
 
   &-content
     font-size: $font-size-md
@@ -42,6 +56,8 @@
     margin-top: 0
     padding: 0 20px
     transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease, padding 0.5s ease
+    @include tablet-version
+      font-size: $font-size-sm
 
     &.expanded
       max-height: 500px

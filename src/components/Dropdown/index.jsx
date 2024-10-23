@@ -15,7 +15,7 @@ const Dropdown = ({ title, children }) => {
         <div
           className='dropdown-arrow'
           style={{ transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)' }}>
-          <img src={ArrowIcon} alt='Dropdown Arrow' />
+          <img src={ArrowIcon} alt='Dropdown Arrow' className='arrow-icon' />
         </div>
       </div>
       <div className={`dropdown-content ${isOpen ? 'expanded' : ''}`}>{children}</div>
