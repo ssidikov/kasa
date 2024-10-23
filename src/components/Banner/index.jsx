@@ -17,8 +17,4 @@ Banner.propTypes = {
   altText: PropTypes.string.isRequired,
 }
 
-Banner.defaultProps = {
-  title: null,
-}
-
 export default Banner

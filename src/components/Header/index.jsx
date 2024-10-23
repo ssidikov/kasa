@@ -12,7 +12,7 @@ function Header() {
       <nav className='header-nav'>
         <ul>
           <li>
-            <NavLink exact to='/' activeClassName='active-link'>
+            <NavLink to='/' activeClassName='active-link'>
               Accueil
             </NavLink>
           </li>
