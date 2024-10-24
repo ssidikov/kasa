@@ -1,0 +1,17 @@
+.rating
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 5px
+
+  &__star
+    cursor: pointer
+    @include tablet-version
+      margin-left: 0
+
+  .star-ico
+    margin-left: 5px
+    @include tablet-version
+      margin-left: 0
+      max-width: 13px
+      max-height: 13px

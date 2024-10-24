@@ -1,8 +1,6 @@
 // import React, { useState } from 'react'
 import Slider from '../Slider'
-import Star from '../../assets/Icons/star.svg'
-import RedStar from '../../assets/Icons/red-star.svg'
-// import ArrowIcon from '../../assets/Icons/arrow-down.svg'
+import Rating from '../Rating'
 import Collapse from '../Collapse'
 
 function PropertyCard({ title, description, pictures, host, rating, location, equipments, tags }) {
@@ -35,13 +33,7 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
             <img src={host.picture} alt={host.name} className='property__host-picture' />
           </div>
           {/* Host rating */}
-          <div className='property__host-rating'>
-            {Array.from({ length: 5 }, (_, index) => (
-              <div key={index} className='property__host-star'>
-                <img src={index < rating ? RedStar : Star} alt='star' className='star-ico' />
-              </div>
-            ))}
-          </div>
+          <Rating rating={rating} />
         </div>
       </div>
 
