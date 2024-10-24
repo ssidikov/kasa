@@ -3,20 +3,9 @@ import Slider from '../Slider'
 import Star from '../../assets/Icons/star.svg'
 import RedStar from '../../assets/Icons/red-star.svg'
 // import ArrowIcon from '../../assets/Icons/arrow-down.svg'
-import Dropdown from '../Dropdown'
+import Collapse from '../Collapse'
 
 function PropertyCard({ title, description, pictures, host, rating, location, equipments, tags }) {
-  // const [isDetailsOpen, setDetailsOpen] = useState(false) // condition for Details
-  // const [isEquipmentsOpen, setEquipmentsOpen] = useState(false) // condition for equipments
-
-  // const toggleDetails = () => {
-  //   setDetailsOpen(!isDetailsOpen)
-  // }
-
-  // const toggleEquipments = () => {
-  //   setEquipmentsOpen(!isEquipmentsOpen)
-  // }
-
   return (
     <div className='property'>
       {/* Slider */}
@@ -58,11 +47,11 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
 
       {/* Description and list of equipment */}
       <div className='property__details'>
-        {/* Dropdown for Details */}
-        <Dropdown title='Details'>{description}</Dropdown>
+        {/* Collapse for Details */}
+        <Collapse title='Details'>{description}</Collapse>
 
-        {/* Dropdown for Équipements */}
-        <Dropdown title='Équipements'>
+        {/* Collapse for Équipements */}
+        <Collapse title='Équipements'>
           <ul>
             {equipments.map((equipment, index) => (
               <li key={index} className='equipment-list'>
@@ -70,7 +59,7 @@ function PropertyCard({ title, description, pictures, host, rating, location, eq
               </li>
             ))}
           </ul>
-        </Dropdown>
+        </Collapse>
       </div>
     </div>
   )

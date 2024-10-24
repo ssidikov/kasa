@@ -1,18 +1,26 @@
 @import '../_variables.sass'
 @import '../_mixins.sass'
 
-.dropdown
+.collapse-container
+  display: flex
+  flex-direction: column
+  justify-content: center
   align-items: center
-  margin: 38px 108px
+  margin: 0 108px 8px
+  @include tablet-version
+    margin: 0
+.collapse
+  margin: 0 0 30px
   border-radius: $border-radius-m
   background-color: rgba(246, 246, 246, 0.45)
-  box-shadow: $dropdown-shadow
+  box-shadow: $collapse-shadow
   font-size: $font-size-lg
   font-weight: 500
   cursor: pointer
   transition: background-color $transition-duration
   @include tablet-version
-    margin: 20px 0
+    width: 100%
+    margin: 0 0 20px
 
   &-header
     border-radius: $border-radius-m
