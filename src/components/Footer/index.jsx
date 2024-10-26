@@ -1,4 +1,3 @@
-import React from 'react'
 import LogoDark from '../../assets/logo-dark.svg'
 
 function Footer() {
